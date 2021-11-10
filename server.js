@@ -1,3 +1,7 @@
+
+// !! IMPORTANT !!
+// in case the node_modules folder is missing (any reason), the code will not work. To make it work as intended, all we have to do is 'npm install', and npm will just check 'dependencies' section from package.json file, and will download all required packages.
+
 const http = require('http');
 const fs = require('fs');
 const _ = require('lodash');
