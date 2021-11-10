@@ -1,0 +1,22 @@
+{
+  "name": "node.js-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vroeN2/node.js-tutorial.git"
+  },
+  "author": "Maciej Zachariasz <47660926+vroeN2@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "vroeN learns Node.js to create some back end stuff and boost his skills even more",
+  "bugs": {
+    "url": "https://github.com/vroeN2/node.js-tutorial/issues"
+  },
+  "homepage": "https://github.com/vroeN2/node.js-tutorial#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

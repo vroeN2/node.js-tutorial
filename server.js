@@ -1,9 +1,20 @@
 const http = require('http');
 const fs = require('fs');
-const { url } = require('inspector');
+const _ = require('lodash');
 
 const server = http.createServer((req, res) => {
-  console.log(req.url, req.method);
+  
+  // lodash
+  const num = _.random(0, 20);
+  console.log(num);
+
+  // using .once() will prevent function from fireing again, even if it will be requested.
+  const greet = _.once(() => {
+    console.log('hello');
+  });
+
+  greet();
+  greet();
 
   // set header content type
   res.setHeader('Content-Type', 'text/html');
