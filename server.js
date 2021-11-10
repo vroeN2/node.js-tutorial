@@ -13,12 +13,15 @@ const server = http.createServer((req, res) => {
   switch(req.url) {
     case '/':
       path += 'index.html';
+      req.statusCode = 200;
       break;
     case '/about':
-      path += 'about.html'
+      path += 'about.html';
+      req.statusCode = 200;
       break;
     default:
         path += '404.html';
+        req.statusCode = 404;
         break;
   }
 
