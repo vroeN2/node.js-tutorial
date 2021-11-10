@@ -8,21 +8,25 @@ const server = http.createServer((req, res) => {
   // set header content type
   res.setHeader('Content-Type', 'text/html');
 
+  // routing
   let path = './views/';
-
   switch(req.url) {
     case '/':
       path += 'index.html';
-      req.statusCode = 200;
+      res.statusCode = 200;
       break;
     case '/about':
       path += 'about.html';
-      req.statusCode = 200;
+      res.statusCode = 200;
+      break;
+    case '/about-me':
+      res.statusCode = 301;
+      res.setHeader('Location', '/about');
+      res.end();
       break;
     default:
-        path += '404.html';
-        req.statusCode = 404;
-        break;
+      path += '404.html';
+      res.statusCode = 404;
   }
 
   // send an html file
